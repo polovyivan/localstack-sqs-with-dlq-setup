@@ -14,9 +14,6 @@ export DLQ_SQS=dlq-sqs
 echo "########### Creating DLQ ###########"
 aws --endpoint-url=http://localstack:4566 sqs create-queue --queue-name $DLQ_SQS
 
-aws --endpoint-url=http://localstack:4566 sqs get-queue-attributes\
-                  --attribute-name All --queue-url=http://localhost:4566/000000000000/"$DLQ_SQS"
-
 echo "########### ARN for DLQ ###########"
 DLQ_SQS_ARN=$(aws --endpoint-url=http://localstack:4566 sqs get-queue-attributes\
                   --attribute-name QueueArn --queue-url=http://localhost:4566/000000000000/"$DLQ_SQS"\
