@@ -22,7 +22,7 @@ DLQ_SQS_ARN=$(aws --endpoint-url=http://localstack:4566 sqs get-queue-attributes
 echo "########### Creating Source queue ###########"
 aws --profile=localstack --endpoint-url=http://localstack:4566 sqs create-queue --queue-name $SOURCE_SQS \
      --attributes '{
-                   "RedrivePolicy": "{\"deadLetterTargetArn\":\"'"$DLQ_SQS_ARN"'\",\"maxReceiveCount\":\"3\"}",
+                   "RedrivePolicy": "{\"deadLetterTargetArn\":\"'"$DLQ_SQS_ARN"'\",\"maxReceiveCount\":\"2\"}",
                    "VisibilityTimeout": "10"
                    }'
 
