@@ -1,9 +1,10 @@
 
 <p align="center">
-  <img width="460" height="300" src="picture-url">
+  <img width="460" height="300" src="https://miro.medium.com/max/1400/1*6ew1sTRcjtKmMYwPLkzEvw.png">
 </p>
 
-<h1 align="center"><a href="blog-url">Blog-name</a></h1>
+<h1 align="center"><a href="https://faun.pub/aws-sqs-with-dead-letter-queue-dlq-local-setup-using-localstack-346dbad98849">AWS SQS with Dead-letter queue (DLQ) local setup using Localstack
+</a></h1>
 
 Commands:
 
